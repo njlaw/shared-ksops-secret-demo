@@ -1,0 +1,4 @@
+# Use this kustomization.yaml file to generate manifests for all apps
+resources:
+  - ./my-app
+  - ./my-other-app

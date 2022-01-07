@@ -1,0 +1,4 @@
+resources:
+  - ../../../../apps/my-other-app
+  - ../../shared
+namespace: my-other-app-namespace

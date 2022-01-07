@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-other-app
+spec:
+  selector:
+    matchLabels:
+      app: my-other-app
+  template:
+    metadata:
+      labels:
+        app: my-other-app
+    spec:
+      containers:
+      - name: my-other-app
+        image: nginx:stable-alpine
+        env:
+          - name: SECRET_DATA
+            valueFrom:
+              secretKeyRef:
+                key: secretData
+                name: mysecret
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

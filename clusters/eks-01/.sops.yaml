@@ -1,0 +1,4 @@
+# The PGP key below will need to be updated with one suitable for your environment
+creation_rules:
+  - encrypted_regex: "^(data|stringData)$"
+    pgp: "140BDC9A5872DD4AE13B7E3A0E0A820CCF37909B"
